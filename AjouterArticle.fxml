@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="581.0" prefWidth="904.0" style="-fx-background-color: #6D6D6D;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="medica.reservation.AjouterArticleController">
+   <children>
+      <Rectangle arcHeight="25.0" arcWidth="25.0" fill="DODGERBLUE" height="90.0" layoutX="294.0" layoutY="417.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-fill: #052a4d;" width="578.0" />
+      <Rectangle arcHeight="25.0" arcWidth="25.0" fill="DODGERBLUE" height="246.0" layoutX="293.0" layoutY="150.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-fill: #052a4d;" width="578.0" />
+      <Label layoutX="330.0" layoutY="220.0" text="Titre" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <Label layoutX="328.0" layoutY="248.0" text="Auteur" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <Label layoutX="325.0" layoutY="284.0" text="Contenu" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <Label layoutX="331.0" layoutY="452.0" text="Image" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <TextField fx:id="Titre" layoutX="415.0" layoutY="215.0" prefHeight="25.0" prefWidth="415.0" />
+      <TextField fx:id="Auteur" layoutX="415.0" layoutY="245.0" prefHeight="25.0" prefWidth="415.0" />
+      <TextField fx:id="Image" layoutX="425.0" layoutY="450.0" prefHeight="25.0" prefWidth="296.0" />
+      <TextArea fx:id="Contenu" layoutX="415.0" layoutY="282.0" prefHeight="96.0" prefWidth="415.0" />
+      <Button layoutX="745.0" layoutY="495.0" mnemonicParsing="false" onAction="#AjouterArticle" prefHeight="25.0" prefWidth="100.0" style="-fx-background-radius: 50; -fx-background-color: #B0E0E6;" text="Ajouter" textFill="#fffafa">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <ComboBox fx:id="Cat" layoutX="414.0" layoutY="180.0" prefHeight="25.0" prefWidth="415.0" />
+      <Label layoutX="330.0" layoutY="185.0" text="Catégorie" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <Button fx:id="UploadBtn" layoutX="745.0" layoutY="405.0" mnemonicParsing="false" onAction="#UploadImage" prefHeight="25.0" prefWidth="100.0" style="-fx-background-radius: 50; -fx-background-color: #B0E0E6;" text="Joindre" textFill="#fffafa">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <ImageView fx:id="catCheck" fitHeight="25.0" fitWidth="33.0" layoutX="838.0" layoutY="180.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="TitreCheck" fitHeight="25.0" fitWidth="33.0" layoutX="838.0" layoutY="215.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="AuteurCheck" fitHeight="25.0" fitWidth="33.0" layoutX="838.0" layoutY="246.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="ContenuCheck" fitHeight="25.0" fitWidth="33.0" layoutX="838.0" layoutY="287.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="Imagecheck" fitHeight="25.0" fitWidth="33.0" layoutX="729.0" layoutY="450.0" pickOnBounds="true" preserveRatio="true" />
+      <VBox alignment="TOP_CENTER" layoutY="-3.0" prefHeight="607.0" prefWidth="256.0" style="-fx-background-color: #B0E0E6;">
+         <children>
+            <ImageView fitHeight="327.0" fitWidth="249.0" pickOnBounds="true" preserveRatio="true" style="-fx-radius: 20;">
+               <VBox.margin>
+                  <Insets bottom="10.0" top="50.0" />
+               </VBox.margin>
+               <image>
+                  <Image url="@../../images/logo.png" />
+               </image>
+            </ImageView>
+            <HBox alignment="CENTER" prefHeight="71.0" prefWidth="71.0">
+               <children>
+                  <Button fx:id="home" mnemonicParsing="false" onAction="#home" prefHeight="71.0" prefWidth="286.0" style="-fx-background-color: #B0E0E6;" text="home" textFill="#052a4d">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="422.0" prefHeight="71.0" prefWidth="236.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="71.0" prefWidth="71.0">
+                     <children>
+                        <ImageView fitHeight="31.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../Desktop/PI/zero/src/Images/home.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <Label fx:id="btnOrders1" contentDisplay="TOP" onDragDetected="#handleClicks" prefHeight="56.0" prefWidth="202.0" text="Se déconnecter" textFill="#052a4d">
+                     <font>
+                        <Font name="Arial Bold" size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Label layoutX="304.0" layoutY="56.0" text="Nouveau Article :">
+         <font>
+            <Font name="Ebrima Bold" size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

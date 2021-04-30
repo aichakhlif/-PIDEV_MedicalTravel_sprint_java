@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="medica.reservation.EspaceBackController">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="591.0" prefWidth="914.0" style="-fx-background-color: #505b61;">
+         <children>
+            <ImageView fitHeight="367.0" fitWidth="914.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/services-bg.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="325.0" fitWidth="344.0" layoutX="33.0" layoutY="-29.0" pickOnBounds="true" preserveRatio="true" style="-fx-radius: 20;">
+               <image>
+                  <Image url="@../../images/logo.png" />
+               </image>
+            </ImageView>
+            <VBox alignment="CENTER" layoutX="51.0" layoutY="256.0" prefHeight="325.0" prefWidth="203.0" spacing="16.0">
+               <children>
+                  <Button fx:id="btn_med" mnemonicParsing="false" onAction="#btn_med" opacity="0.73" prefHeight="39.0" prefWidth="203.0" style="-fx-background-color: #052a4d; -fx-background-radius: 50;" text="gestion medecin " textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btn_resback1" mnemonicParsing="false" onAction="#btn_Blog" opacity="0.73" prefHeight="39.0" prefWidth="203.0" style="-fx-background-color: #052a4d; -fx-background-radius: 50;" text="blog" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btn_rec" mnemonicParsing="false" onAction="#btn_rec" opacity="0.73" prefHeight="39.0" prefWidth="203.0" style="-fx-background-color: #052a4d; -fx-background-radius: 50;" text="reclamation" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+            <Button fx:id="btn_offre" layoutX="615.0" layoutY="345.0" mnemonicParsing="false" onAction="#btn_offre" opacity="0.73" prefHeight="39.0" prefWidth="203.0" style="-fx-background-color: #052a4d; -fx-background-radius: 50;" text="gestion des offres" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_clinique" layoutX="327.0" layoutY="345.0" mnemonicParsing="false" onAction="#btn_clinique" opacity="0.73" prefHeight="39.0" prefWidth="203.0" style="-fx-background-color: #052a4d; -fx-background-radius: 50;" text="gestion des cliniques" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_RD" layoutX="327.0" layoutY="399.0" mnemonicParsing="false" onAction="#btn_RD" opacity="0.73" prefHeight="39.0" prefWidth="203.0" style="-fx-background-color: #052a4d; -fx-background-radius: 50;" text="gestion des rendez vous" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_D" layoutX="327.0" layoutY="452.0" mnemonicParsing="false" onAction="#btn_D" opacity="0.73" prefHeight="39.0" prefWidth="203.0" style="-fx-background-color: #052a4d; -fx-background-radius: 50;" text="gestion des dossiers" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_resback" layoutX="615.0" layoutY="452.0" mnemonicParsing="false" onAction="#btn_resback" opacity="0.73" prefHeight="39.0" prefWidth="203.0" style="-fx-background-color: #052a4d; -fx-background-radius: 50;" text=" reservations patient" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_resof" layoutX="615.0" layoutY="399.0" mnemonicParsing="false" onAction="#btn_mesresof" opacity="0.73" prefHeight="39.0" prefWidth="203.0" style="-fx-background-color: #052a4d; -fx-background-radius: 50;" text="Mes réservations offres" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_user" layoutX="327.0" layoutY="508.0" mnemonicParsing="false" onAction="#btn_user" opacity="0.73" prefHeight="39.0" prefWidth="203.0" style="-fx-background-color: #052a4d; -fx-background-radius: 50;" text="les users " textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Label layoutX="59.0" layoutY="263.0" text="Espace Admin " textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

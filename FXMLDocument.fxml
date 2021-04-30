@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="581.0" prefWidth="904.0" style="-fx-background-color: #6D6D6D;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="zerobug69.FXMLDocumentController">
+   <children>
+      <Rectangle arcHeight="25.0" arcWidth="25.0" fill="DODGERBLUE" height="240.0" layoutX="270.0" layoutY="49.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-fill: #052a4d;" width="620.0" />
+      <TableView fx:id="tab_cli" layoutX="272.0" layoutY="368.0" onMouseClicked="#handleMouseAction" prefHeight="217.0" prefWidth="620.0">
+        <columns>
+          <TableColumn fx:id="collid" prefWidth="37.0" text="ID" />
+          <TableColumn fx:id="coladresse" prefWidth="67.0" text="adresse" />
+            <TableColumn fx:id="colnom" prefWidth="74.0" text="Nom" />
+            <TableColumn fx:id="collemail" prefWidth="101.0" text="Email" />
+            <TableColumn fx:id="coltel" minWidth="0.0" prefWidth="57.0" text="Tel" />
+            <TableColumn fx:id="colimage" prefWidth="104.0" text="Image" />
+            <TableColumn fx:id="colspec" prefWidth="133.0" text="Specialité" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnmodifier" layoutX="666.0" layoutY="273.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="31.0" prefWidth="95.0" style="-fx-background-color: #B0E0E6; -fx-background-radius: 50;" text="Modifier" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <Button fx:id="btnsupprimer" layoutX="769.0" layoutY="273.0" mnemonicParsing="false" onAction="#handleButtonAction" style="-fx-background-color: #B0E0E6; -fx-background-radius: 50;" text="Supprimer" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <TextField fx:id="filtrefield" layoutX="397.0" layoutY="336.0" prefHeight="25.0" prefWidth="210.0" style="-fx-background-radius: 50;" />
+      <ImageView fx:id="checkadr" fitHeight="21.0" fitWidth="34.0" layoutX="543.0" layoutY="137.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="checkNom" fitHeight="21.0" fitWidth="34.0" layoutX="543.0" layoutY="179.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="checkNum" fitHeight="21.0" fitWidth="34.0" layoutX="817.0" layoutY="92.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="emailcheck" fitHeight="21.0" fitWidth="34.0" layoutX="543.0" layoutY="231.0" pickOnBounds="true" preserveRatio="true" />
+      <Button layoutX="272.0" layoutY="330.0" mnemonicParsing="false" onAction="#ExportPDF" prefHeight="31.0" prefWidth="89.0" style="-fx-background-radius: 50;" text="PDF" />
+      <Button fx:id="btnajout" layoutX="581.0" layoutY="274.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="0.0" prefWidth="76.0" style="-fx-background-color: #B0E0E6; -fx-background-radius: 50;" text="Ajouter" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <Button fx:id="uploadbutton" layoutX="754.0" layoutY="170.0" mnemonicParsing="false" onAction="#Uploadfile" prefHeight="25.0" prefWidth="60.0" style="-fx-background-color: #B0E0E6; -fx-background-radius: 50;" text="Upload" textFill="#f5f2f2">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="tri" layoutX="619.0" layoutY="336.0" mnemonicParsing="false" onAction="#getCliniqueListTri" style="-fx-background-radius: 50;" text="Tri par ID" textFill="#0a0a0a" />
+      <Button fx:id="tri1" layoutX="690.0" layoutY="336.0" mnemonicParsing="false" onAction="#getCliniqueListTri1" style="-fx-background-radius: 50;" text="X" textFill="#0a0a0a" />
+      <Button fx:id="tri2" layoutX="747.0" layoutY="336.0" mnemonicParsing="false" onAction="#getCliniqueListTri2" style="-fx-background-radius: 50;" text="Tri par ADRESSE" textFill="#0a0a0a" />
+      <Button fx:id="tri22" layoutX="857.0" layoutY="336.0" mnemonicParsing="false" onAction="#getCliniqueListTri22" style="-fx-background-radius: 50;" text="X" textFill="#0a0a0a" />
+      <ImageView fx:id="checkspec" fitHeight="21.0" fitWidth="34.0" layoutX="823.0" layoutY="231.0" pickOnBounds="true" preserveRatio="true" />
+      <VBox alignment="TOP_CENTER" layoutY="-3.0" prefHeight="607.0" prefWidth="256.0" style="-fx-background-color: #B0E0E6;">
+         <children>
+            <ImageView fitHeight="289.0" fitWidth="243.0" pickOnBounds="true" preserveRatio="true" style="-fx-radius: 20;">
+               <VBox.margin>
+                  <Insets bottom="10.0" top="50.0" />
+               </VBox.margin>
+               <image>
+                  <Image url="@../images/logo.png" />
+               </image>
+            </ImageView>
+            <HBox alignment="CENTER" prefHeight="71.0" prefWidth="71.0">
+               <children>
+                  <Button fx:id="home" mnemonicParsing="false" onAction="#home" prefHeight="71.0" prefWidth="286.0" style="-fx-background-color: #B0E0E6;" text="home" textFill="#052a4d">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="422.0" prefHeight="71.0" prefWidth="236.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="71.0" prefWidth="71.0">
+                     <children>
+                        <ImageView fitHeight="31.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../Desktop/PI/zero/src/Images/home.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <Label fx:id="btnOrders1" contentDisplay="TOP" onDragDetected="#handleClicks" prefHeight="56.0" prefWidth="202.0" text="Se déconnecter" textFill="#052a4d">
+                     <font>
+                        <Font name="Arial Bold" size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Label layoutX="312.0" layoutY="137.0" text="Adresse" textFill="#ebebeb">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="312.0" layoutY="182.0" text="Nom" textFill="#ebebeb">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="310.0" layoutY="231.0" text="Email" textFill="#ebebeb">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="579.0" layoutY="94.0" text="Telephone " textFill="#ebebeb">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="585.0" layoutY="137.0" text="Image" textFill="#ebebeb">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="590.0" layoutY="232.0" prefHeight="21.0" prefWidth="76.0" text="Specialite" textFill="#ebebeb">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfid" layoutX="381.0" layoutY="92.0" prefHeight="25.0" prefWidth="156.0" />
+      <TextField fx:id="tfadresse" layoutX="382.0" layoutY="135.0" prefHeight="25.0" prefWidth="156.0" />
+      <TextField fx:id="tftel" layoutX="381.0" layoutY="177.0" prefHeight="25.0" prefWidth="156.0" />
+      <TextField fx:id="tfnom" layoutX="385.0" layoutY="229.0" />
+      <TextField fx:id="tfemail" layoutX="658.0" layoutY="92.0" />
+      <Label layoutX="310.0" layoutY="92.0" text="id" textFill="#ebebeb">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfimage" layoutX="658.0" layoutY="135.0" />
+      <TextField fx:id="tfspec" layoutX="666.0" layoutY="229.0" />
+      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="279.0" layoutY="332.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/pdf.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="467.0" layoutY="14.0" text="Gestion Clinique">
+         <font>
+            <Font name="Ebrima Bold" size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

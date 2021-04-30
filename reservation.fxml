@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="581.0" prefWidth="904.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="medica.reservation.ReservationController">
+    <stylesheets>
+        <URL value="@reservation.css" />
+    </stylesheets>
+   <children>
+      <TableView fx:id="tabReservation" layoutX="277.0" layoutY="130.0" onMouseClicked="#OnMouseObjectifPred" prefHeight="357.0" prefWidth="605.0">
+         <columns>
+            <TableColumn fx:id="colid_res" prefWidth="49.0" text="idres" />
+            <TableColumn fx:id="colnom" prefWidth="135.0" text="nom /prenom " />
+            <TableColumn fx:id="colemail" prefWidth="53.0" text="email" />
+            <TableColumn fx:id="colpays" minWidth="0.0" text="pays" />
+            <TableColumn fx:id="colinter" prefWidth="97.0" text="intervention" />
+            <TableColumn fx:id="colmed" prefWidth="79.0" text=" medecin" />
+            <TableColumn fx:id="colclinique" prefWidth="111.0" text="clinique" />
+         </columns>
+      </TableView>
+      <Label layoutX="285.0" layoutY="31.0" text="Reservation">
+         <font>
+            <Font name="Ebrima Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfrechres" layoutX="446.0" layoutY="76.0" onKeyReleased="#rechercherObjectif" prefHeight="31.0" prefWidth="321.0" promptText="Rechercher..." style="-fx-background-radius: 50;" />
+      <Button alignment="CENTER" layoutX="789.0" layoutY="76.0" mnemonicParsing="false" onAction="#PDF" prefHeight="31.0" prefWidth="92.0" style="-fx-background-radius: 50;" text="PDF">
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/pdf.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <ComboBox fx:id="cbtriObjPred" layoutX="276.0" layoutY="76.0" onAction="#selectTriObjPred" prefHeight="31.0" prefWidth="152.0" style="-fx-background-radius: 50;" />
+      <HBox alignment="CENTER" layoutX="432.0" layoutY="494.0" prefHeight="60.0" prefWidth="450.0" spacing="8.0">
+         <children>
+            <Button fx:id="btn_ajout1" mnemonicParsing="false" prefHeight="31.0" prefWidth="233.0" style="-fx-background-color: #B0E0E6; -fx-background-radius: 50;" text="ajouter une reservation" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Button>
+            <Button fx:id="modif_res" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#modifier_res" prefHeight="31.0" prefWidth="201.0" style="-fx-background-radius: 50; -fx-background-color: #B0E0E6;" text="Gérer ma réservation" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Button>
+         </children>
+      </HBox>
+      <VBox alignment="TOP_CENTER" layoutY="-9.0" prefHeight="601.0" prefWidth="256.0" style="-fx-background-color: #B0E0E6;">
+         <children>
+            <ImageView fitHeight="303.0" fitWidth="256.0" pickOnBounds="true" preserveRatio="true" style="-fx-radius: 20;">
+               <VBox.margin>
+                  <Insets bottom="10.0" top="50.0" />
+               </VBox.margin>
+               <image>
+                  <Image url="@../../images/logo.png" />
+               </image>
+            </ImageView>
+            <HBox alignment="CENTER" prefHeight="71.0" prefWidth="71.0">
+               <children>
+                  <Button fx:id="home" mnemonicParsing="false" onAction="#home" prefHeight="71.0" prefWidth="286.0" style="-fx-background-color: #B0E0E6;" text="home" textFill="#052a4d">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font></Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="422.0" prefHeight="71.0" prefWidth="236.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="71.0" prefWidth="71.0">
+                     <children>
+                        <ImageView fitHeight="31.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../Desktop/PI/zero/src/Images/home.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <Label fx:id="btnOrders1" contentDisplay="TOP" onDragDetected="#handleClicks" prefHeight="56.0" prefWidth="202.0" text="Se déconnecter" textFill="#052a4d">
+                     <font>
+                        <Font name="Arial Bold" size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="441.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../gui/Images/search-9-96.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

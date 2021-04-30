@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="581.0" prefWidth="904.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="medica.dossier.AjoutDossierController">
+   <children>
+      <Label layoutX="453.0" layoutY="71.0" text="Dossier Medical">
+         <font>
+            <Font name="Ebrima Bold" size="24.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="25.0" arcWidth="25.0" fill="DODGERBLUE" height="328.0" layoutX="289.0" layoutY="147.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-fill: #052a4d;" width="567.0" />
+      <Label layoutX="352.0" layoutY="252.0" prefHeight="21.0" prefWidth="124.0" text="Référence" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="352.0" layoutY="281.0" prefHeight="17.0" prefWidth="92.0" text="Fichier" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="reference" layoutX="467.0" layoutY="239.0" prefHeight="26.0" prefWidth="242.0" style="-fx-background-radius: 50;" />
+      <TextField fx:id="fichier" layoutX="467.0" layoutY="279.0" prefHeight="26.0" prefWidth="241.0" style="-fx-background-radius: 50;" />
+      <Button fx:id="ok" layoutX="699.0" layoutY="459.0" mnemonicParsing="false" onAction="#ajoutDossier" prefHeight="25.0" prefWidth="147.0" style="-fx-background-color: #B0E0E6; -fx-background-radius: 50;" text="Valider" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="uploadbutton" layoutX="562.0" layoutY="295.0" mnemonicParsing="false" onAction="#Uploadfile" prefHeight="31.0" prefWidth="147.0" style="-fx-background-color: #B0E0E6; -fx-background-radius: 50;" text="choisir une image" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <VBox alignment="TOP_CENTER" layoutY="-3.0" prefHeight="685.0" prefWidth="256.0" style="-fx-background-color: #B0E0E6;">
+         <children>
+            <ImageView fitHeight="327.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true" style="-fx-radius: 20;">
+               <VBox.margin>
+                  <Insets bottom="10.0" top="50.0" />
+               </VBox.margin>
+               <image>
+                  <Image url="@../../images/logo.png" />
+               </image>
+            </ImageView>
+            <HBox alignment="CENTER" prefHeight="71.0" prefWidth="71.0">
+               <children>
+                  <Button fx:id="home" mnemonicParsing="false" onAction="#home" prefHeight="71.0" prefWidth="286.0" style="-fx-background-color: #B0E0E6;" text="home" textFill="#052a4d">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="422.0" prefHeight="71.0" prefWidth="236.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="71.0" prefWidth="71.0">
+                     <children>
+                        <ImageView fitHeight="31.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../Desktop/PI/zero/src/Images/home.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <Label fx:id="btnOrders1" contentDisplay="TOP" onDragDetected="#handleClicks" prefHeight="56.0" prefWidth="202.0" text="Se déconnecter" textFill="#052a4d">
+                     <font>
+                        <Font name="Arial Bold" size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

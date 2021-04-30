@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="581.0" prefWidth="904.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="zerobug69.FXMLOFFREController">
+   <children>
+      <AnchorPane id="AnchorPane" layoutY="-14.0" prefHeight="581.0" prefWidth="904.0" style="-fx-background-color: #6D6D6D;">
+         <children>
+            <Rectangle arcHeight="25.0" arcWidth="25.0" fill="DODGERBLUE" height="246.0" layoutX="286.0" layoutY="65.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-fill: #052a4d;" width="593.0" />
+            <TableView fx:id="tab_off" layoutX="284.0" layoutY="346.0" onMouseClicked="#handleMouseAction" prefHeight="246.0" prefWidth="597.0">
+               <columns>
+                  <TableColumn fx:id="afid" prefWidth="46.0" text="ID" />
+                  <TableColumn fx:id="afcl" prefWidth="93.0" text="Clinique" />
+                  <TableColumn fx:id="afmed" prefWidth="122.0" text="Medecin" />
+                  <TableColumn fx:id="afint" prefWidth="130.0" text="Intervention" />
+                  <TableColumn fx:id="afpr" minWidth="0.0" prefWidth="102.0" text="Prix" />
+                  <TableColumn fx:id="afdate" minWidth="5.0" prefWidth="141.0" text="Date " />
+               </columns>
+            </TableView>
+            <Button fx:id="btnajout" layoutX="551.0" layoutY="295.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="26.0" prefWidth="76.0" style="-fx-background-color: #B0E0E6; -fx-background-radius: 50;" text="ajouter" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Button>
+            <Button fx:id="btnmodifier" layoutX="640.0" layoutY="292.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="31.0" prefWidth="122.0" style="-fx-background-color: #B0E0E6; -fx-background-radius: 50;" text="Modifier" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Button>
+            <Button fx:id="btnsupprimer" layoutX="770.0" layoutY="292.0" mnemonicParsing="false" onAction="#handleButtonAction" style="-fx-background-color: #B0E0E6; -fx-background-radius: 50;" text="supprimer" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Button>
+            <Label layoutX="634.0" layoutY="230.0" prefHeight="21.0" prefWidth="142.0" text="Date expiration" textFill="#fffbfb">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <VBox alignment="TOP_CENTER" layoutY="7.0" prefHeight="607.0" prefWidth="256.0" style="-fx-background-color: #B0E0E6;">
+               <children>
+                  <ImageView fitHeight="271.0" fitWidth="243.0" pickOnBounds="true" preserveRatio="true" style="-fx-radius: 20;">
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="50.0" />
+                     </VBox.margin>
+                     <image>
+                        <Image url="@../images/logo.png" />
+                     </image>
+                  </ImageView>
+                  <HBox alignment="CENTER" prefHeight="71.0" prefWidth="71.0">
+                     <children>
+                        <Button fx:id="home" mnemonicParsing="false" onAction="#home" prefHeight="71.0" prefWidth="286.0" style="-fx-background-color: #B0E0E6;" text="home" textFill="#052a4d">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="422.0" prefHeight="71.0" prefWidth="236.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="71.0" prefWidth="71.0">
+                           <children>
+                              <ImageView fitHeight="31.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../Desktop/PI/zero/src/Images/home.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                        <Label fx:id="btnOrders1" contentDisplay="TOP" onDragDetected="#handleClicks" prefHeight="56.0" prefWidth="202.0" text="Se déconnecter" textFill="#052a4d">
+                           <font>
+                              <Font name="Arial Bold" size="15.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <Label layoutX="359.0" layoutY="131.0" text="Clinique" textFill="#fffbfb">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="358.0" layoutY="178.0" text="Medecin" textFill="#fffbfb">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="358.0" layoutY="230.0" text="Intervention" textFill="#fffbfb">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="647.0" layoutY="178.0" text="Prix" textFill="#fffbfb">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="359.0" layoutY="88.0" text="ID" textFill="#fffbfb">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="ipid" layoutX="453.0" layoutY="86.0" styleClass="transparent" stylesheets="@../CSS/styles.css" />
+            <DatePicker fx:id="tfedate" layoutX="761.0" layoutY="226.0" prefHeight="25.0" prefWidth="80.0" />
+            <TextField fx:id="ippr" layoutX="699.0" layoutY="176.0" prefHeight="25.0" prefWidth="142.0" styleClass="transparent" />
+            <ComboBox fx:id="cmbinter" layoutX="452.0" layoutY="226.0" prefWidth="150.0" styleClass="comboBox" />
+            <ComboBox fx:id="cmbmed" layoutX="452.0" layoutY="176.0" prefWidth="150.0" styleClass="comboBox" />
+            <ComboBox fx:id="cmbclq" layoutX="452.0" layoutY="129.0" prefWidth="150.0" styleClass="comboBox" />
+            <Label layoutX="490.0" layoutY="24.0" text="Gestion Des Offres">
+               <font>
+                  <Font name="Ebrima Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

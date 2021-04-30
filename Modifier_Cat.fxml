@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="581.0" prefWidth="904.0" style="-fx-background-color: #6D6D6D;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="medica.reservation.Modifier_CatController">
+   <children>
+      <Rectangle arcHeight="25.0" arcWidth="25.0" fill="DODGERBLUE" height="177.0" layoutX="280.0" layoutY="245.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-fill: #052a4d;" width="593.0" />
+      <Label layoutX="388.0" layoutY="363.0" prefHeight="17.0" prefWidth="79.0" text="Nom" textFill="#f5f2f2">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <TextField fx:id="NomCat" layoutX="428.0" layoutY="359.0" />
+      <Button fx:id="Modifier" layoutX="620.0" layoutY="410.0" mnemonicParsing="false" onAction="#Mod" prefHeight="31.0" prefWidth="98.0" style="-fx-background-radius: 50; -fx-background-color: #B0E0E6;" text="Modifier" textFill="#fcf9f9">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <Button fx:id="Supprimer" layoutX="729.0" layoutY="410.0" mnemonicParsing="false" onAction="#supprimerCat" prefHeight="31.0" prefWidth="98.0" style="-fx-background-radius: 50; -fx-background-color: #B0E0E6;" text="Supprimer" textFill="#fcf9f9">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <Label layoutX="388.0" layoutY="324.0" prefHeight="17.0" prefWidth="79.0" text="Id" textFill="#f5f2f2">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <TextField fx:id="IdCat" layoutX="428.0" layoutY="320.0" />
+      <VBox alignment="TOP_CENTER" layoutY="-4.0" prefHeight="610.0" prefWidth="256.0" style="-fx-background-color: #B0E0E6;">
+         <children>
+            <ImageView fitHeight="261.0" fitWidth="246.0" pickOnBounds="true" preserveRatio="true" style="-fx-radius: 20;">
+               <VBox.margin>
+                  <Insets bottom="10.0" top="50.0" />
+               </VBox.margin>
+               <image>
+                  <Image url="@../../images/logo.png" />
+               </image>
+            </ImageView>
+            <HBox alignment="CENTER" prefHeight="71.0" prefWidth="71.0">
+               <children>
+                  <Button fx:id="home" mnemonicParsing="false" onAction="#home" prefHeight="71.0" prefWidth="286.0" style="-fx-background-color: #B0E0E6;" text="home" textFill="#052a4d">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="422.0" prefHeight="71.0" prefWidth="236.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="71.0" prefWidth="71.0">
+                     <children>
+                        <ImageView fitHeight="31.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../Desktop/PI/zero/src/Images/home.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <Label fx:id="btnOrders1" contentDisplay="TOP" onDragDetected="#handleClicks" prefHeight="56.0" prefWidth="202.0" text="Se déconnecter" textFill="#052a4d">
+                     <font>
+                        <Font name="Arial Bold" size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Label layoutX="301.0" layoutY="262.0" opacity="0.52" prefHeight="21.0" prefWidth="288.0" text="veuillez modifier la catégorie :" textFill="#fcfcfc">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="301.0" layoutY="151.0" text="Nouvelle Catégorie :">
+         <font>
+            <Font name="Ebrima Bold" size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="581.0" prefWidth="904.0" style="-fx-background-color: #6D6D6D;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="medica.reservation.ArticleController">
+   <children>
+      <TableView fx:id="ArticleTab" layoutX="283.0" layoutY="169.0" prefHeight="373.0" prefWidth="607.0">
+        <columns>
+          <TableColumn fx:id="ColTitre" text="Titre" />
+            <TableColumn fx:id="ColAuteur" prefWidth="130.0" text="Auteur" />
+            <TableColumn fx:id="ColDate" prefWidth="92.0" text="Date" />
+            <TableColumn fx:id="ColContenu" minWidth="0.0" prefWidth="257.0" text="Contenu" />
+            <TableColumn fx:id="ColId" prefWidth="47.0" text="Id" />
+        </columns>
+      </TableView>
+      <Button fx:id="AjouterArt_Btn" layoutX="605.0" layoutY="549.0" mnemonicParsing="false" style="-fx-background-radius: 50; -fx-background-color: #B0E0E6;" text="Nouveau Article" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <Button fx:id="P_Btn" layoutX="748.0" layoutY="549.0" mnemonicParsing="false" onAction="#Modifier_Art" prefHeight="25.0" prefWidth="85.0" style="-fx-background-radius: 50; -fx-background-color: #B0E0E6;" text="Gerer" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <Button fx:id="btn_nav" layoutX="295.0" layoutY="121.0" mnemonicParsing="false" onAction="#btn_mesres" style="-fx-background-radius: 50; -fx-background-color: #B0E0E6;" text="Catégorie Blog" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <TextField fx:id="barrederecherche" layoutX="433.0" layoutY="124.0" onKeyReleased="#rechercherObjectif" style="-fx-background-radius: 50;" />
+      <ComboBox fx:id="cbtriObjPred" layoutX="596.0" layoutY="124.0" onAction="#selectTriObjPred" prefHeight="25.0" prefWidth="152.0" style="-fx-background-radius: 50;" />
+      <Button fx:id="PDF" layoutX="759.0" layoutY="121.0" mnemonicParsing="false" onAction="#ExportPDF" prefHeight="25.0" prefWidth="130.0" style="-fx-background-radius: 50; -fx-background-color: #B0E0E6;" text="Exporter PDF" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <VBox alignment="TOP_CENTER" layoutY="-3.0" prefHeight="607.0" prefWidth="256.0" style="-fx-background-color: #B0E0E6;">
+         <children>
+            <ImageView fitHeight="261.0" fitWidth="248.0" pickOnBounds="true" preserveRatio="true" style="-fx-radius: 20;">
+               <VBox.margin>
+                  <Insets bottom="10.0" top="50.0" />
+               </VBox.margin>
+               <image>
+                  <Image url="@../../images/logo.png" />
+               </image>
+            </ImageView>
+            <HBox alignment="CENTER" prefHeight="71.0" prefWidth="71.0">
+               <children>
+                  <Button fx:id="home" mnemonicParsing="false" onAction="#home" prefHeight="71.0" prefWidth="286.0" style="-fx-background-color: #B0E0E6;" text="home" textFill="#052a4d">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="422.0" prefHeight="71.0" prefWidth="236.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="71.0" prefWidth="71.0">
+                     <children>
+                        <ImageView fitHeight="31.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../Desktop/PI/zero/src/Images/home.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <Label fx:id="btnOrders1" contentDisplay="TOP" onDragDetected="#handleClicks" prefHeight="56.0" prefWidth="202.0" text="Se déconnecter" textFill="#052a4d">
+                     <font>
+                        <Font name="Arial Bold" size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Label layoutX="283.0" layoutY="57.0" text="Gestion des articles :">
+         <font>
+            <Font name="Ebrima Bold" size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

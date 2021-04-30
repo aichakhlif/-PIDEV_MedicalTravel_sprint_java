@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="602.0" prefWidth="902.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="medica.reservation.ModifierReservationController">
+   <children>
+      <Rectangle arcHeight="25.0" arcWidth="25.0" fill="DODGERBLUE" height="243.0" layoutX="271.0" layoutY="72.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-fill: #052a4d;" width="617.0" />
+      <Label alignment="CENTER" layoutX="404.0" layoutY="25.0" prefHeight="31.0" prefWidth="330.0" text="Modifier Reservation">
+         <font>
+            <Font name="Ebrima Bold" size="24.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tabReservation" layoutX="270.0" layoutY="354.0" onMouseClicked="#OnMouseObjectifPred" prefHeight="217.0" prefWidth="617.0">
+         <columns>
+            <TableColumn fx:id="colid_res" prefWidth="36.0" text="idres" />
+            <TableColumn fx:id="colnom" prefWidth="102.0" text="Nom /Prénom " />
+            <TableColumn fx:id="colemail" prefWidth="103.0" text="Email" />
+            <TableColumn fx:id="colpays" minWidth="0.0" prefWidth="59.0" text="Pays" />
+            <TableColumn fx:id="colinter" prefWidth="109.0" text="Intervention" />
+            <TableColumn fx:id="colmed" prefWidth="85.0" text="Médecin" />
+            <TableColumn fx:id="colclinique" prefWidth="163.0" text="Clinique" />
+         </columns>
+      </TableView>
+      <HBox alignment="TOP_CENTER" layoutX="276.0" layoutY="88.0" prefHeight="196.0" prefWidth="108.0" />
+      <HBox layoutX="554.0" layoutY="91.0" prefHeight="127.0" prefWidth="310.0">
+         <children>
+            <VBox alignment="BOTTOM_CENTER" prefHeight="127.0" prefWidth="161.0" spacing="44.0">
+               <children>
+                  <Label prefHeight="21.0" prefWidth="182.0" text="Type d'intervention" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="21.0" prefWidth="175.0" text="Choisir le médecin" textFill="WHITE" textOverrun="CLIP">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="0.0" prefWidth="153.0" text="Choisir la clinique" textFill="WHITE" textOverrun="CLIP">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox prefHeight="127.0" prefWidth="149.0" spacing="30.0">
+               <children>
+                  <ComboBox fx:id="combo_inter" prefWidth="150.0" style="-fx-background-radius: 50; -fx-background-color: white;" />
+                  <ComboBox fx:id="combo_med" prefWidth="150.0" style="-fx-background-radius: 50; -fx-background-color: white;" />
+                  <ComboBox fx:id="combo_clinique" prefHeight="34.0" prefWidth="149.0" style="-fx-background-radius: 50; -fx-background-color: white;" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <TextField fx:id="txt_nom" layoutX="399.0" layoutY="150.0" prefHeight="31.0" prefWidth="143.0" style="-fx-background-radius: 50;" />
+      <TextField fx:id="tfid_res" layoutX="399.0" layoutY="93.0" prefHeight="31.0" prefWidth="143.0" style="-fx-background-radius: 50;" />
+      <TextField fx:id="txt_email" layoutX="399.0" layoutY="205.0" prefHeight="31.0" prefWidth="143.0" style="-fx-background-radius: 50;" />
+      <TextField fx:id="txt_pays" layoutX="399.0" layoutY="261.0" prefHeight="31.0" prefWidth="143.0" style="-fx-background-radius: 50;" />
+      <VBox alignment="BOTTOM_CENTER" layoutX="288.0" layoutY="93.0" prefHeight="196.0" prefWidth="147.0" spacing="35.0">
+         <children>
+            <Label prefHeight="21.0" prefWidth="153.0" text="ID Res" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label prefHeight="21.0" prefWidth="178.0" text="Nom/Prénom" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label prefHeight="21.0" prefWidth="154.0" text="Email" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="pays" prefHeight="21.0" prefWidth="158.0" text="Pays" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <Button fx:id="ok1" layoutX="588.0" layoutY="304.0" mnemonicParsing="false" onAction="#suppreservation" prefHeight="35.0" prefWidth="135.0" style="-fx-background-radius: 50; -fx-background-color: #B0E0E6;" text="Supprimer" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="15.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/trash.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="ok" layoutX="734.0" layoutY="303.0" mnemonicParsing="false" onAction="#modifierreservation" prefHeight="37.0" prefWidth="125.0" style="-fx-background-radius: 50; -fx-background-color: #B0E0E6;" text="Modifier" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/updated.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <VBox alignment="TOP_CENTER" layoutY="-7.0" prefHeight="610.0" prefWidth="256.0" style="-fx-background-color: #B0E0E6;">
+         <children>
+            <ImageView fitHeight="272.0" fitWidth="253.0" pickOnBounds="true" preserveRatio="true" style="-fx-radius: 20;">
+               <VBox.margin>
+                  <Insets bottom="10.0" top="50.0" />
+               </VBox.margin>
+               <image>
+                  <Image url="@../../images/logo.png" />
+               </image>
+            </ImageView>
+            <HBox alignment="CENTER" prefHeight="71.0" prefWidth="71.0">
+               <children>
+                  <Button fx:id="home" mnemonicParsing="false" onAction="#home" prefHeight="71.0" prefWidth="286.0" style="-fx-background-color: #B0E0E6;" text="home" textFill="#052a4d">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="422.0" prefHeight="71.0" prefWidth="236.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="71.0" prefWidth="71.0">
+                     <children>
+                        <ImageView fitHeight="31.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../Desktop/PI/zero/src/Images/home.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <Label fx:id="btnOrders1" contentDisplay="TOP" onDragDetected="#handleClicks" prefHeight="56.0" prefWidth="202.0" text="Se déconnecter" textFill="#052a4d">
+                     <font>
+                        <Font name="Arial Bold" size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
